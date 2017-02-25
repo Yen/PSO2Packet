@@ -1,0 +1,19 @@
+packet:
+    - ItemCount:
+        type: UInt32
+        subxor: true
+        description: Number of title IDs in the packet (also the number of titles)
+    - ItemIDs:
+        type: UInt32[ItemCount]
+        description: Array of title IDs
+    - CharacterCount:
+        type: UInt32
+        subxor: true
+        description: Number of wide characters in the upcoming section
+    - Characters:
+        type: WChar[CharacterCount]
+        align: 4
+        description: All characters (Unicode LE) in the packed string, these strings have no null terminator
+    - ItemLengths:
+        type: Byte[ItemCount]
+        description: Array of character count lengths (# of WCHARs per string)

@@ -1,0 +1,48 @@
+# unsigned integers
+
+-
+  name: UInt8
+  size: 1
+  signed: false
+-
+  name: UInt16
+  size: 2
+  signed: false
+-
+  name: UInt32
+  size: 4
+  signed: false
+-
+  name: UInt64
+  size: 8
+  signed: false
+
+# signed integers
+
+-
+  name: Int8
+  size: 1
+  signed: true
+-
+  name: Int16
+  size: 2
+  signed: true
+-
+  name: Int32
+  size: 4
+  signed: true
+-
+  name: Int64
+  size: 8
+  signed: true
+
+# characters
+
+-
+  name: Char8
+  size: 1
+  signed: false
+-
+  name: Char16
+  size: 2
+  signed: false

@@ -1,23 +1,45 @@
-header: "Packets/PSO2PacketHeader.yml"
+header: "PacketHeader.yml"
 
 packets:
-    - type         : 0x04
-      subtype      : 0x0F
-      source       : server
-      packet       : "Packets/PSO2PacketDamage.yml"
-      description  : Damage Info Packet (External sources)
+  -
+    name        : Damage
+    type        : 0x04
+    subtype     : 0x0F
+    source      : server
+    packet      : "Packets/PSO2PacketDamage.yml"
+    description : Damage Info Packet (External sources)
 
-    - type         : 0x04
-      subtype      : 0x52
-      source       : server
-      packet       : "Packets/PSO2PacketDamage.yml"
-      description  : Damage Info Packet
+  -
+    name        : Damage
+    type        : 0x04
+    subtype     : 0x52
+    source      : server
+    packet      : "Packets/PSO2PacketDamage.yml"
+    description : Damage Info Packet
 
-    - type         : 0x31
-      subtype      : 0x05
-      source       : server
-      packet       : "Packets/PSO2PacketPackedString.yml"
-      flags        : 0x0400
-      sub          : 0x92
-      xor          : 0x57E6
-      description  : Packed Title List packet from the Title NPC
+  -
+    name        : Packed String
+    type        : 0x31
+    subtype     : 0x05
+    source      : server
+    packet      : "Packets/PSO2PacketPackedString.yml"
+    flags       : 0x0400
+    sub         : 0x92
+    xor         : 0x57E6
+    description : Packed Title List packet from the Title NPC
+
+  -
+    name        : Token
+    type        : 0x11
+    subtype     : 0x0C
+    source      : server
+    packet      : "Packets/PSO2PacketToken.yml"
+    description : Token returned to the client, same token is sent in `PSO2PacketKeyExchange`
+
+  -
+    name        : Key Exchange
+    type        : 0x11
+    subtype     : 0x0B
+    source      : client
+    packet      : "Packets/PSO2KeyExchange.yml"
+    description : Packet containing all the information to start encrypting packets

@@ -1,78 +1,75 @@
 packet:
   types:
-    -
-      name: FlagsBitfield
+    - name: FlagsBitfield
       type: UInt8
       masks: # TODO
-        -
-          name: JustAttack
+        - name: JustAttack
           value: 0x01
           description: Just attack
-        -
-          name: Unknown
+
+        - name: Unknown
           value: 0x02
           description: Unknown
-        -
-          name: Misc
+
+        - name: Misc
           value: 0x04
           description: Healing, lava, etc... all use this
-        -
-          name: Damage
+
+        - name: Damage
           value: 0x08
           description: If damaging attack
-        -
-          name: MultiHit
+
+        - name: MultiHit
           value: 0x10
           description: MultiHit, One Point and Infinite Fire use this
-        -
-          name: Misc2
+
+        - name: Misc2
           value: 0x20
           description: Zanverse uses this
-        -
-          name: Crit
+
+        - name: Crit
           value: 0x40
           description: If this is a crit
   members:
-    -   
-      name: AccountID
+    - name: AccountID
       type: UInt32
       description: Active user account ID (ARKS ID)
-    -
-      name: Unknown # TODO
+
+    - name: Unknown # TODO
       type: UInt8[8]
-    -
-      name: TargetID
+
+    - name: TargetID
       type: UInt32
       description: Target ID of action target
-    -
-      name: Unknown # TODO
+
+    - name: Unknown # TODO
       type: UInt8[6]
-    -
-      name: InstanceID
+
+    - name: InstanceID
       type: UInt32
       description: Current instance ID
-    -
-      name: SourceID
+
+    - name: SourceID
       type: UInt32
       description: ID of action user
-    -
-      name: Unknown # TODO
+
+    - name: Unknown # TODO
       type: UInt8[8]
-    -
-      name: AnimationID
+
+    - name: AnimationID
       type: UInt32
       description: ID of action
-    -
-      name: Value
+
+    - name: Value
       type: Int32
       description: Amount of damage or healing, can be negative or positive
-    -
-      name: Unknown # TODO
+
+    - name: Unknown # TODO
       type: UInt8[16]
-    -
-      name: Flags
+
+    - name: Flags
       type: FlagsBitfield
       description: Bitfield for flags related to damage
-    -
-      name: Unknown # TODO
+      
+    - name: Unknown # TODO
       type: UInt8[11]

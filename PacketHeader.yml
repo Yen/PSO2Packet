@@ -1,19 +1,18 @@
 header:
   size: 8
   members:
-    -
-      name: Size
+    - name: Size
       type: UInt32
       description: Total packet size, including header
-    -
-      name: Type
+      
+    - name: Type
       type: UInt8
       description: Packet type
-    -
-      name: Subtype
+
+    - name: Subtype
       type: UInt8
       description: Packet subtype
-    -
-      name: Flags # TODO
+
+    - name: Flags # TODO
       type: UInt8[2]
       description: Bitfield, second byte might just be padding

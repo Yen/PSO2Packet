@@ -1,20 +1,17 @@
 packet:
   size: 260
   types:
-    -
-      name: PayloadType
+    - name: PayloadType
       size: 128
       members:
-        -
-          name: Token
+        - name: Token
           type: UInt8[16]
           description: Session token
-        -
-          name: RC4Key
+
+        - name: RC4Key
           type: UInt8[16]
           description: Key for decoding packets once encryption is enabled
   members:
-    -
-      name: Payload
+    - name: Payload
       type: PayloadType
       description: Encrypted with RSA PKCS1 then reversed

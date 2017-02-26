@@ -1,24 +1,21 @@
 header: "PacketHeader.yml"
 
 packets:
-  -
-    name        : Damage
+  - name        : Damage
     type        : 0x04
     subtype     : 0x0F
     source      : server
     packet      : "Packets/PSO2PacketDamage.yml"
     description : Damage Info Packet (External sources)
 
-  -
-    name        : Damage
+  - name        : Damage
     type        : 0x04
     subtype     : 0x52
     source      : server
     packet      : "Packets/PSO2PacketDamage.yml"
     description : Damage Info Packet
 
-  -
-    name        : Packed String
+  - name        : Packed String
     type        : 0x31
     subtype     : 0x05
     source      : server
@@ -28,16 +25,14 @@ packets:
     xor         : 0x57E6
     description : Packed Title List packet from the Title NPC
 
-  -
-    name        : Token
+  - name        : Token
     type        : 0x11
     subtype     : 0x0C
     source      : server
     packet      : "Packets/PSO2PacketToken.yml"
     description : Token returned to the client, same token is sent in `PSO2PacketKeyExchange`
 
-  -
-    name        : Key Exchange
+  - name        : Key Exchange
     type        : 0x11
     subtype     : 0x0B
     source      : client

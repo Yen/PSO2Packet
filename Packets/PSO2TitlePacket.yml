@@ -14,6 +14,10 @@ packet:
         type: WChar[CharacterCount]
         align: 4
         description: All characters (Unicode LE) in the packed string, these strings have no null terminator
+    - ItemLengthsCount:
+        type: UInt32
+        subxor: true
+        description: Number of item lengths in the upcoming section (should be same as ItemCount)
     - ItemLengths:
-        type: Byte[ItemCount]
+        type: Byte[ItemLengthsCount]
         description: Array of character count lengths (# of WCHARs per string)

@@ -2,11 +2,11 @@ packet:
     - ItemCount:
         type: UInt32
         subxor: true
-        description: Number of title IDs in the packet (also the number of titles)
+        description: Number of IDs in the packet
     - ItemIDs:
         type: UInt32[ItemCount]
         align: 4
-        description: Array of title IDs
+        description: Array of IDs
     - CharacterCount:
         type: UInt32
         subxor: true

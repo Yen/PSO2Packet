@@ -1,56 +1,75 @@
 packet:
-    - AccountID:
-        type: UInt32
-        description: Active user account ID (ARKS ID)
-    - Unknown1: #TODO
-        type: Byte[8]
-    - TargetID:
-         type: UInt32
-         description: Target ID of action target
-    - Unknown2: #TODO
-        type: Byte[6]
-    - InstanceID:
-        type: UInt32
-        description: Current instance ID
-    - SourceID:
-        type: UInt32
-        description: ID of action user
-    - Unknown3: #TODO
-        type: Byte[8]
-    - AnimationID:
-        type: UInt32
-        description: ID of action
-    - Value:
-        type: Int32
-        description: Amount of damage or healing, can be negative or positive
-    - Unknown4: #TODO
-        type: Byte[16]
-    - flags:
-        type:
-            name: Bitfield
-            size: 1
-            masks: #TODO
-                - name: JustAttack
-                  value: 0x01
-                  description: Just attack
-                - name: Unknown
-                  value: 0x02
-                  description: Unknown
-                - name: Misc
-                  value: 0x04
-                  description: Healing, lava, etc... all use this
-                - name: Damage
-                  value: 0x08
-                  description: If damaging attack
-                - name: MultiHit
-                  value: 0x10
-                  description: MultiHit, One Point and Infinite Fire use this
-                - name: Misc2
-                  value: 0x20
-                  description: Zanverse uses this
-                - name: Crit
-                  value: 0x40
-                  description: If this is a crit
-        description: Bitfield for flags related to damage
-    - Unknown5: #TODO
-        type: Byte[11]
+  types:
+    - name: FlagsBitfield
+      type: UInt8
+      masks: # TODO
+        - name: JustAttack
+          value: 0x01
+          description: Just attack
+
+        - name: Unknown
+          value: 0x02
+          description: Unknown
+
+        - name: Misc
+          value: 0x04
+          description: Healing, lava, etc... all use this
+
+        - name: Damage
+          value: 0x08
+          description: If damaging attack
+
+        - name: MultiHit
+          value: 0x10
+          description: MultiHit, One Point and Infinite Fire use this
+
+        - name: Misc2
+          value: 0x20
+          description: Zanverse uses this
+
+        - name: Crit
+          value: 0x40
+          description: If this is a crit
+  members:
+    - name: AccountID
+      type: UInt32
+      description: Active user account ID (ARKS ID)
+
+    - name: Unknown # TODO
+      type: UInt8[8]
+
+    - name: TargetID
+      type: UInt32
+      description: Target ID of action target
+
+    - name: Unknown # TODO
+      type: UInt8[6]
+
+    - name: InstanceID
+      type: UInt32
+      description: Current instance ID
+
+    - name: SourceID
+      type: UInt32
+      description: ID of action user
+
+    - name: Unknown # TODO
+      type: UInt8[8]
+
+    - name: AnimationID
+      type: UInt32
+      description: ID of action
+
+    - name: Value
+      type: Int32
+      description: Amount of damage or healing, can be negative or positive
+
+    - name: Unknown # TODO
+      type: UInt8[16]
+
+    - name: Flags
+      type: FlagsBitfield
+      description: Bitfield for flags related to damage
+
+    - name: Unknown # TODO
+      type: UInt8[11]

@@ -9,4 +9,4 @@ matrix:
         - os: linux
           dist: trusty
 script:
-  - yamllint -s -c Test/yamllint.conf Packets.yml Packets/*.yml
+  - yamllint -s -c Test/yamllint.conf Packets.yml Types.yml Packets/*.yml

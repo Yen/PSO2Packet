@@ -5,19 +5,21 @@ packet:
         description: Number of title IDs in the packet (also the number of titles)
     - ItemIDs:
         type: UInt32[ItemCount]
+        align: 4
         description: Array of title IDs
     - CharacterCount:
         type: UInt32
         subxor: true
-        description: Number of wide characters in the upcoming section
+        description: Number of wide characters in the upcoming section, includes a null terminator but does not include 0x0000 added at the end for padding
     - Characters:
         type: WChar[CharacterCount]
         align: 4
-        description: All characters (Unicode LE) in the packed string, these strings have no null terminator
+        description: All characters (Unicode LE) in the packed string, there's a null terminator only at the end of the last string, must be aligned to 4 bytes
     - ItemLengthsCount:
         type: UInt32
         subxor: true
-        description: Number of item lengths in the upcoming section (should be same as ItemCount)
+        description: Number of item lengths in the upcoming section (should be same as ItemCount), does not account for padding characters
     - ItemLengths:
         type: Byte[ItemLengthsCount]
-        description: Array of character count lengths (# of WCHARs per string)
+        align: 4
+        description: Array of character count lengths (# of WCHARs per string), aligned to 4 bytes

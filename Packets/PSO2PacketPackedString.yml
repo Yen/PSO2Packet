@@ -4,7 +4,7 @@ packet:
       type: UInt32
       subxor: true
       description: Number of IDs in the packet
-      
+
     - name: ItemIDs
       type: UInt32[ItemCount]
       align: 4

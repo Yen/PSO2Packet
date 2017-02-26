@@ -70,6 +70,6 @@ packet:
     - name: Flags
       type: FlagsBitfield
       description: Bitfield for flags related to damage
-      
+
     - name: Unknown # TODO
       type: UInt8[11]

@@ -24,7 +24,7 @@ packets:
     sub         : 0x92
     xor         : 0x57E6
     description : Packed Title List packet from the Title NPC
-    
+
   - name        : Item Name Packet
     type        : 0x0F
     subtype     : 0x30

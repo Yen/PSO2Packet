@@ -15,7 +15,7 @@ packets:
     packet      : "Packets/PSO2PacketDamage.yml"
     description : Damage Info Packet
 
-  - name        : Packed String
+  - name        : Title Packet
     type        : 0x31
     subtype     : 0x05
     source      : server
@@ -24,6 +24,16 @@ packets:
     sub         : 0x92
     xor         : 0x57E6
     description : Packed Title List packet from the Title NPC
+    
+  - name        : Item Name Packet
+    type        : 0x0F
+    subtype     : 0x30
+    source      : server
+    packet      : "Packets/PSO2PacketPackedString.yml"
+    flags       : 0x0400
+    sub         : 0x46
+    xor         : 0x9E22
+    description : Packed Item List packet (Inventory)
 
   - name        : Token
     type        : 0x11

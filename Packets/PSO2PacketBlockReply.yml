@@ -1,0 +1,15 @@
+packet:
+  members:
+    - name: Unknown # TODO
+      type: UInt8[12]
+
+    - name: Address
+      type: UInt32
+      description: Network address of where the block is hosted
+
+    - name: Port
+      type: UInt16
+      description: Port of the block host
+
+    - name: Unknown # TODO
+      type: UInt8[]

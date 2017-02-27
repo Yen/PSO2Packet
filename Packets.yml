@@ -38,3 +38,52 @@ packets:
     source      : client
     packet      : "Packets/PSO2KeyExchange.yml"
     description : Packet containing all the information to start encrypting packets
+
+  - name        : Login
+    type        : 0x11
+    subtype     : 0x0
+    source      : client
+    packet      : "Packets/PSO2PacketLogin.yml"
+    description : Contains login credentials and other client information
+
+  - name        : Login Confirmation
+    type        : 0x11
+    subtype     : 0x1
+    source      : server
+    packet      : "Packets/PSO2PacketLoginConfirmation.yml"
+    description : Sent at login or block change
+
+  - name        : User Room Info
+    type        : 0x11
+    subtype     : 0x17
+    source      : server
+    packet      : "Packets/PSO2PacketRoomInfo.yml"
+    description : Info about the room including connection info
+
+  - name        : Team Room Info
+    type        : 0x11
+    subtype     : 0x4F
+    source      : server
+    packet      : "Packets/PSO2PacketRoomInfo.yml"
+    description : Info about the room including connection info
+
+  - name        : Shared Ship
+    type        : 0x11
+    subtype     : 0x21
+    source      : server
+    packet      : "Packets/PSO2PacketSharedShip.yml"
+    description : Info about shared ship connection
+
+  - name        : Block Reply
+    type        : 0x11
+    subtype     : 0x13
+    source      : server
+    packet      : "Packets/PSO2PacketBlockReply.yml"
+    description : After requesting to join a block information about the host it sent here
+
+  - name        : Block Info
+    type        : 0x11
+    subtype     : 0x2C
+    source      : server
+    packet      : "Packets/PSO2PacketBlockInfo.yml"
+    description : Contains information about a single block

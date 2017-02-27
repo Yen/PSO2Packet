@@ -1,0 +1,18 @@
+packet:
+  members:
+    - name: Unknown # TODO
+      type: UInt8[24]
+
+    - name: Address
+      type: UInt32
+      description: The network address of the server where the room is hosted
+
+    - name: Unknown # TODO
+      type: UInt8[4]
+
+    - name: Port
+      type: UInt16
+      description: The port where the server is hosted at the address specified above
+
+    - name: Unknown
+      type: UInt8[] # TODO

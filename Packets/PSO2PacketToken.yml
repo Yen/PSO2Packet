@@ -1,5 +1,4 @@
 packet:
   members:
     - name: Token
-      size: 16
       type: UInt8[16]

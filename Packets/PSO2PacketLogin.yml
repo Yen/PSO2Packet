@@ -1,0 +1,17 @@
+packet:
+  members:
+    - name: Unknown # TODO
+      type: UInt8[]
+
+    - name: Username
+      type: Char16[32]
+      description: Non null terminated UTF16LE encoded string, unused characters spaces are null
+
+    - name: Password
+      type: Char16[32]
+      description: Non null terminated UTF16LE encoded string, unused characters spaces are null
+
+    - name: Unknown # TODO
+      type: UInt8[68]
+
+  description: As the size of the start of the packet is unknown, decoding is done from the end backwards

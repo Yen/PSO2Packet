@@ -1,0 +1,12 @@
+packet:
+  members:
+    - name: Address
+      type: UInt32
+      description: Network address of where the ship is hosted
+    
+    - name: Port
+      type: UInt16
+      description: Port of the ship host
+
+    - name: Unknown # TODO
+      type: UInt8[]

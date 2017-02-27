@@ -5,7 +5,7 @@ packet:
 
     - name: Name
       type: Char16[32]
-      description: Non null terminated UTF16LE name of the block, empty characters are null 
+      description: Non null terminated UTF16LE name of the block, empty characters are null
 
     - name: Address
       type: UInt32

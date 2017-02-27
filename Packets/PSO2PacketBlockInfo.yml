@@ -1,0 +1,19 @@
+packet:
+  members:
+    - name: Unknown # TODO
+      type: UInt8[32]
+
+    - name: Name
+      type: Char16[32]
+      description: Non null terminated UTF16LE name of the block, empty characters are null
+
+    - name: Address
+      type: UInt32
+      description: Network address of where the block is hosted
+
+    - name: Port
+      type: UInt16
+      description: Port of the block host
+
+    - name: Unknown # TODO
+      type: UInt8[]

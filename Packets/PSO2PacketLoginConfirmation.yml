@@ -1,0 +1,11 @@
+packet:
+  members:
+    - name: Unknown # TODO
+      type: UInt8[20]
+
+    - name: BlockName
+      type: Char16[32]
+      description: Non null terminated UTF16LE encoded string, unused characters spaces are null
+
+    - name: Unknown # TODO
+      type: UInt8[]

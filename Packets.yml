@@ -41,7 +41,7 @@ packets:
 
   - name        : Login
     type        : 0x11
-    subtype     : 0x0
+    subtype     : 0x00
     source      : client
     packet      : "Packets/PSO2PacketLogin.yml"
     description : Contains login credentials and other client information

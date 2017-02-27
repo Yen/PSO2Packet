@@ -48,7 +48,7 @@ packets:
 
   - name        : Login Confirmation
     type        : 0x11
-    subtype     : 0x1
+    subtype     : 0x01
     source      : server
     packet      : "Packets/PSO2PacketLoginConfirmation.yml"
     description : Sent at login or block change
